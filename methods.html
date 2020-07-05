@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script type="text/javascript" src="meas_data/00003/dashboard_site_data_00003.json"></script> 
+<script type="text/javascript" src="webfiles/navbar.js"></script> 
+<script type="text/javascript" src="def/def_v_ave.js"></script>
+<script type="text/javascript" src="def/def_pdf.js"></script>
+<script type="text/javascript" src="webfiles/Chart.js"></script> 
+<script type="text/javascript" src="def/def_cp.js"></script>   
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>OpenWind</title>
+
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/> <!-- needed for map icons only -->
+<link href="webfiles/styles.css" rel="stylesheet"></p>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+</head>
+<body>
+  
+<p><nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">OpenWind</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button></p>
+
+<p><div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <script>document.write(motto);</script>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="overview.html"><script>document.write(navbar_dd.tab1);</script></a>
+          <a class="dropdown-item" href="datasources.html"><script>document.write(navbar_dd.tab2);</script></a>
+          <a class="dropdown-item current" href="methods.html"><script>document.write(navbar_dd.tab3);</script></a>
+<!--          <div class="dropdown-divider"></div>-->
+        </div>
+    </li>
+        <li class="nav-item">
+            <a class="nav-link" href="wind_map.html">Wind Site Map<!--<span class="sr-only">(current)</span>--></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sample Reports</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="meas_data/00003/dashboard_00003.html">Preliminary Dashboard</a>
+            <a class="dropdown-item" href="meas_data/00399/hi_res_dashboard_00399.html">High Resolution Dashboard</a>
+            <a class="dropdown-item" href="try_data/434_63/try_dashboard_434_63.html">DWD TRY Dashboard</a>
+<!--          <div class="dropdown-divider"></div>-->
+        </div>
+    </ul>
+  <!--  <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>-->
+  </div>
+</nav></p>
+
+<h1 id="toc_0">Actionable Information</h1>
+
+<div role="navigation"><ul class="nav nav-tabs">
+  <li class="nav-item"><a class="nav-link" href="overview.html"><script>document.write(navbar_dd.tab1);</script></a></li>
+  <li class="nav-item"><a class="nav-link" href="datasources.html"><script>document.write(navbar_dd.tab2);</script></a></li>
+  <li class="nav-item"><a class="nav-link active" href="methods.html"><script>document.write(navbar_dd.tab3);</script></a></li>
+<!--  <li class="nav-item"><a class="nav-link" href="glossary.html">Wind Science Glossary</a></li>
+--></ul></div>
+
+<h2 id="toc_0">Wind Analysis</h2>
+<p>The standard method to calculate the potential wind energy yield at a site uses a few equations to deal with certain statistical issues, such as missing data or measurements campaigns that are not at the same height as a proposed turbine. The necessary equations and methods are explained here. </p>
+
+
+<h2 id="toc_1">Predicted Wind Speed at Hub Height</h2>
+
+<p>The analysis calculates wind speed at three standard tower heights using data from the DWD measurement stations. These measurement stations are not at the height of a wind turbine tower. The wind speed need to be calculated at the tower height because wind speed increases as you move away from the surface or ground. The measured wind speeds are scaled up from the measurement height to the hub height using an industry-standard logarithmic wind profile.</p>
+
+<div class = "cell cell_hi_res_wind_history">
+    <h3 class="tooltip">Wind Speed Annual History<span class="tooltiptext">Calculated wind speed average based on standard tower heights.<a href="about.html#average_wind_speed">More</a></span></h3>
+    <canvas id="wind_speed_annual_history"></canvas>
+    <script>v_ave_plot(base_v_ave);</script>
+</div>
+
+<p>This profile uses a roughness length of z<sub>0</sub> = 0.05, which assumes the site is relatively flat with minimal blockage (rural croplands). Obstacles at a site increase the surface roughness and, in turn, lower the speed of the wind and yield of the turbine.</p>
+
+<h3 id="toc_2">Logarithmic profile used for the analysis:</h3>
+
+<div class="equation"><p>$$v_2 = v_1 { ln ( h_2 / z_0 ) \over ln ( h_1 / z_0)}$$</p></div>
+
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>$$v_2$$</td>
+<td>Wind speed projected to turbine hub height</td>
+</tr>
+<tr>
+<td>$$v_1$$</td>
+<td>Wind speed at measurement height</td>
+</tr>
+<tr>
+<td>$$h_2$$</td>
+<td>Turbine hub height</td>
+</tr>
+<tr>
+<td>$$h_1$$</td>
+<td>Measurement or station height</td>
+</tr>
+<tr>
+<td>$$z_0$$</td>
+<td>Surface roughness</td>
+</tr>
+</tbody>
+</table>
+
+<!--WC: Is it worth re-ordering the variables so that v1 and v2, h1 and h2 are count up numbers? Or does this read correctly now?-->
+
+<h2 id="toc_3">Wind Speed Probability Distribution <em>PDF</em> <em>%</em> </h2>
+
+<p>Wind speeds vary at a given site. The proven method to capture the complexity of the wind speed variation is to calculate a wind speed distribution profile for the site.  In simple terms, this is the probability of a wind speed occuring at the site. The industry standard profile that best models wind speeds is the <a href = "https://en.wikipedia.org/wiki/Weibull_distribution" target="_blank">Weibull distribution</a>. The Weibull allows for a complete estimation of the wind speed probability distribution function.</p>
+
+
+<div class = "cell cell_probability_density">
+    <h3 class="tooltip">Wind Speed Probability Density<span class="tooltiptext">Wind speed distribution or how often the wind at the site is at a given wind speed.<a href="../about.html#probability_density">More</a></span></h3>
+    <canvas id="probability_density"></canvas>
+    <script>pdf_plot(base_pdf_data);</script>
+</div>
+
+
+
+<h2 id="toc_4">The Power Curve <em>P</em> <em>W</em></h2>
+
+<p>Since the power produced by a wind turbine varies with the wind speed, it is necessary to estimate the power production for every wind speed where a turbine produces power. This is called the power curve of a wind turbine.</p>
+
+<p>The power curve is the amount of power a wind turbine produces at specific wind speeds. The maximum is the rated power of the turbine, but wind turbine power production is dependent upon the wind speed. The formula, shown below, calculates power production factoring in standard turbine specifications and wind speed probability distribution. A standard power curve is used to estimate the production based on wind speed.</p>
+
+<h3 id="toc_6">Representative Power Curve</h3>
+
+<div class = "cell cell_power_curve">
+    <canvas id="powerCurve" width="100px" height="400px"></canvas>
+    <script type="text/javascript" src="webFiles/powerCurve.js"></script>   
+</div>
+
+<h3>Power Curve Equation:</h3>
+<div class="equation"><p>$$P = 1/2 \cdot C_p \cdot \rho \cdot \pi \cdot R^2 \cdot v^3$$</p></div>
+
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>Unit</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><i>$$P$$</i></td>
+<td>Power produced </td>
+<td>W</td>
+</tr>
+<tr>
+<td><i>$$c_p$$</i></td>
+<td>Turbine coefficient of power </td>
+<td>%</td>
+</tr>
+<tr>
+<td><i>$$&rho;$$</i></td>
+<td>Density of air </td> 
+<td>kg/m<sup>3</sup></td>
+</tr>
+<tr>
+<td><i>$$R$$</i></td>
+<td>Turbine blade length </td>
+<td>m</td>
+</tr>
+<tr>
+<td><i>$$v$$</i></td>
+<td>Turbine hub height wind speed </td>
+<td>m/s</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_7">Estimated Power Production</h2>
+
+<p>With a site wind speed distribution array <strong>PDF</strong> and a power curve array <strong>P</strong> from a turbine, you can estimate the power production.</p>
+
+<p>The turbines used in the power analysis represent three turbine size categories. The smallest turbine [S] is applicable for a home or farm. The medium turbine [M] is based on a commercial pitch-controlled turbine. The large turbine [L] is also based on a pitch-controlled model and is near the maximum size for onshore installations. The data for the turbine models are in the table below. </p>
+
+<h3 id="toc_8">Wind Turbine Models</h3>
+
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Power Rating [kw]</th>
+<th>Blade Length [m]</th>
+<th>Tower Height [m]</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Small [S]</td>
+<td>10</td>
+<td>3.4</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Medium [M]</td>
+<td>1500</td>
+<td>41</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Large [L]</td>
+<td>3465</td>
+<td>64.5</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+
+<p>For power production, the density of air assumes a standard 1.225 [kg/m<sup>3</sup>] and turbine availability of 100%. All turbines assume a peak efficiency of 48% which is a standard efficiency for commercial wind turbine. This value is limited by physics. That limit is 59%.</p>
+
+<h2 id="toc_4">Capacity Factor <em>C<sub>p</sub></em> <em>%</em></h2>
+
+<p>The capacity factor is the percentage estimate of the potential energy a wind turbine produces at a given site for a typical year. An example, if a turbine were to produce at its rated or maximum power over an entire year, then its capacity factor would be 100%. Most onshore sites expect values in the low teens to high twenties (very very good). </p>
+
+
+
+<div class="cell cell_capacity_factor">
+    <h3 class="tooltip">Representative Capacity Factor - Site Aachen<span class="tooltiptext">Estimated percent of possible energy a turbine could produce in a year at the site. Equivalent full time operation.</h3>
+         <canvas id="capacity_factor"width="600" height="600"></canvas>
+    <script>cp_plot(base_production.c_p);</script>
+</div>
+
+<p>The Capacity Factor is a critical parameter for estimating the production and therefore economic viability of a turbine at a site. </p>
+
+</body>
+
+</html>
