@@ -1,5 +1,5 @@
 var site_try = {}
-site_try["00003"] =  "../../../../try_data/434_63/try_dashboard_434_63.html";
+site_try["00003"] =  "../../try_data/434_63/try_dashboard_434_63.html";
 site_try["00011"] =  "../../try_data/124_219/try_dashboard_124_219.html";
 site_try["00044"] =  "../../try_data/655_214/try_dashboard_655_214.html";
 site_try["00052"] =  "../../try_data/736_342/try_dashboard_736_342.html";
