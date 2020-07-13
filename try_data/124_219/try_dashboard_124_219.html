@@ -1,11 +1,11 @@
 <!-- 00003 dashboard html input file --> 
-<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+
 <!--<script type="text/javascript" src="hi_res_dashboard_site_data_00003.json"></script> -->
 <!DOCTYPE html>
 <html>
 
 <head>
-
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
 <script type="text/javascript" src="try_dashboard_site_data_124_219.json"></script> 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   
@@ -14,16 +14,17 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script type="text/javascript" src="../def/def_cp.js"></script>
-  <script type="text/javascript" src="../def/def_v_ave.js"></script>
-  <script type="text/javascript" src="../def/def_wind_rose.js"></script>
-  <script type="text/javascript" src="../def/def_pdf.js"></script>
-  <script type="text/javascript" src="../def/def_data_quality.js"></script>
-  <script type="text/javascript" src="../def/def_monthly_wind_ave.js"></script>
-  <script type="text/javascript" src="../def/def_hourly_wind_ave.js"></script>
+  <script type="text/javascript" src="../../def/def_cp.js"></script>
+  <script type="text/javascript" src="../../def/def_v_ave.js"></script>
+  <script type="text/javascript" src="../../def/def_wind_rose.js"></script>
+  <script type="text/javascript" src="../../def/def_pdf.js"></script>
+  <script type="text/javascript" src="../../def/def_data_quality.js"></script>
+  <script type="text/javascript" src="../../def/def_monthly_wind_ave.js"></script>
+  <script type="text/javascript" src="../../def/def_hourly_wind_ave.js"></script>
+  <script type="text/javascript" src="../../webfiles/navbar.js"></script> 
 
 
-  <script type="text/javascript" src="../webfiles/Chart.js"></script>  
+  <script type="text/javascript" src="../../webfiles/Chart.js"></script>  
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta charset="utf-8">
@@ -36,39 +37,40 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<link href="../webfiles/style.css" rel="stylesheet">
+<link href="../../webfiles/style.css" rel="stylesheet">
 
 </head>
 <body>
 
 <p><nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="../index.html">OpenWind</a>
+  <a class="navbar-brand" href="../../index.html">OpenWind</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button></p>
 
-<p><div class="collapse navbar-collapse" id="navbarSupportedContent">
+<p>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Using Our Science
+          <script>document.write(motto);</script>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../overview.html">Overview</a>
-          <a class="dropdown-item" href="../datasources.html">Data Sources</a>
-          <a class="dropdown-item" href="../methods.html">Analysis Methods</a>
+          <a class="dropdown-item" href="../../overview.html"><script>document.write(navbar_dd.tab1);</script></a></a>
+          <a class="dropdown-item" href="../../datasources.html"><script>document.write(navbar_dd.tab2);</script></a></a>
+          <a class="dropdown-item" href="../../methods.html"><script>document.write(navbar_dd.tab3);</script></a></a>
 <!--          <div class="dropdown-divider"></div>-->
         </div>
     </li>
         <li class="nav-item">
-            <a class="nav-link" href="../wind_map.html">Wind Site Map<!--<span class="sr-only">(current)</span>--></a>
+            <a class="nav-link" href="../../wind_map.html">Wind Site Map<!--<span class="sr-only">(current)</span>--></a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sample Reports</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../00003/dashboard_00003.html">Preliminary Dashboard</a>
-            <a class="dropdown-item" href="../00399/hi_res_dashboard_00399.html">High Resolution Dashboard</a>
-            <a class="dropdown-item current" href="../124_219/try_dashboard_124_219.html">DWD TRY Dashboard</a>
+          <script>document.write(navbar_dd.baseline);</script>
+          <script>document.write(navbar_dd.hi_res);</script>
+          <script>document.write(navbar_dd.try);</script>
 <!--          <div class="dropdown-divider"></div>-->
         </div>
     </ul>
@@ -77,7 +79,8 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>-->
   </div>
-</nav></p>
+</nav>
+</p>
 
 
 <div class="greater_container">
@@ -109,11 +112,7 @@
   </div>
     <div class="site_map_div site_nomap_div">
       <p><script>document.write(site_data.lat),document.write('° N, '),document.write(site_data.lon),document.write('° E');</script></p>
-      <script>document.write('<a href="https://goo.gl/maps/cGqbv2kZu5DLQq2n9" target="none">View on Google Maps</a>');</script>
-<!--       <script type="text/javascript">
-        var url = "../miniMaps/dashboard_map_" + try_near_comp.site_number[0] + ".html";
-        document.write('<object type="text/html" class="site_map" data="' + url + '"></object>');
-      </script> -->
+      <script>document.write('<a href='), document.write(site_data.gmap_link), document.write(' target="_blank">View on Google Maps</a>');</script>
     </div>
 </div>
 
@@ -141,42 +140,41 @@
 
 
 <div class="cell cell_recording_history">
-        <h3 class="tooltip">Wind Turbine Estimated Production<span class="tooltiptext">Potentit top right (also needed to keep the top bar height )*/
-.topnav h3 {al energy a turbine could produce in a year. <a href="about.html">More</a></span></h3>
+        <h3 class="tooltip">Wind Turbine Estimated Production<span class="tooltiptext">Potential energy a turbine could produce in a year. <a href="../../methods.html#toc_7">More</a></span></h3>
   <table id="recording_history_table" class="table">
   </table>
 </div> 
 
 
 <div class = "cell cell_hi_res_wind_history">
-    <h3 class="tooltip">Wind Speed Annual History<span class="tooltiptext">Calculated wind speed average based on standard tower heights.<a href="about.html#average_wind_speed">More</a></span></h3>
+    <h3 class="tooltip">Wind Speed Annual History<span class="tooltiptext">Calculated wind speed average based on standard tower heights.<a href="../../datasources.html#toc_3">More</a></span></h3>
     <canvas id="wind_speed_annual_history"></canvas>
     <script>v_ave_plot(try_v_ave);</script>
 </div>
 
 
 <div class = "cell cell_hi_res_wind_ave_monthly">
-    <h3 class="tooltip">Wind Speed Monthly Averages</h3>
+    <h4><script>document.write('Wind Speed Monthly Averages');</script></h4>
     <canvas id="monthly_ave_wind_speed"></canvas>
     <script>monthly_v_ave_plot(try_monthly_v_ave);</script>
 </div>
 
 <div class = "cell cell_hi_res_wind_ave_hourly">
-    <h3 class="tooltip">Wind Speed Hourly Averages</h3>
+    <h4><script>document.write('Wind Speed Hourly/Diurnal Averages');</script></h4>
     <canvas id="hourly_ave_wind_speed"></canvas>
     <script>hourly_v_ave_plot(try_hour_v_ave);</script>
 </div>
 
 
 <div class = "cell cell_probability_density">
-    <h3 class="tooltip">Wind Speed Probability Density<span class="tooltiptext">Wind speed distribution or how often the wind at the site is at a given wind speed.<a href="../about.html#probability_density">More</a></span></h3>
+    <h3 class="tooltip">Wind Speed Probability Density<span class="tooltiptext">Wind speed distribution or how often the wind at the site is at a given wind speed.<a href="../../methods.html#toc_3">More</a></span></h3>
     <canvas id="probability_density"></canvas>
     <script>pdf_plot(try_pdf_data);</script>
 </div>
 
 
 <div class = "cell cell_wind_direction_00">  
-  <h3 class=tooltip> Prevailing Wind Direction: <script>document.write(site_data.prevailing_wind_dir);</script><span class="tooltiptext">A preliminary analysis of the wind direction are provided along with the prevailing wind direction.<a href="about.html#wind_direction" target="">More</a></span></h3> 
+  <h3 class=tooltip> Prevailing Wind Direction: <script>document.write(site_data.prevailing_wind_dir);</script><span class="tooltiptext">A preliminary analysis of the wind direction are provided along with the prevailing wind direction.<a href="../../datasources.html##toc_4" target="">More</a></span></h3> 
     <canvas class="wind_rose" id="wind_rose0" width="500" height="500"></canvas>
     <script>wind_rose_plot(wind_rose_data_m0);</script>
 </div>
@@ -258,19 +256,19 @@
 
 
 <div class="cell cell_capacity_factor">
-    <h3 class="tooltip">Capacity Factor<span class="tooltiptext">Estimated percent of possible energy a turbine could produce in a year at the site. Equivalent full time operation.<a href="about.html#capacity_factor">More</a></span></h3>
+    <h3 class="tooltip">Capacity Factor<span class="tooltiptext">Estimated percent of possible energy a turbine could produce in a year at the site. Equivalent full time operation.<a href="../../methods.html#toc_4">More</a></span></h3>
          <canvas id="capacity_factor"width="600" height="600"></canvas>
     <script>cp_plot(try_production.c_p);</script>
 </div>
 
 <div class="cell cell_nearby_comparison_table">
-        <h3 class="tooltip">Nearby Site Comparison<span class="tooltiptext">Nearest sites with measurement data. <a href="about.html">More</a></span></h3>
+  <h4><script>document.write('Nearby Measurement Sites for Comparison');</script></h4>
   <table id="neary_site_comparison" class="table">
   </table>
 </div> 
 
 <script>
-var row_data = '<tr> <th><h3 class="tooltip"> Turbine<span class="tooltiptext">The Small, Medium and Large turbine models are fully detailed in the Power Production section of the About page. <a href="about.html#power_production_about">More</a></span></h3></th> <th>Rated Power kW</th> <th>Energy Production kWh</th></tr>';
+var row_data = '<tr> <th><h3 class="tooltip"> Turbine<span class="tooltiptext">The Small, Medium and Large turbine models are fully detailed in the Power Production section of the About page. <a href="../../methods.html#toc_8">More</a></span></h3></th> <th>Rated Power kW</th> <th>Energy Production kWh</th></tr>';
 for (var i = 0; i < try_production.turbine.length; i++) {
   var row_data = row_data + '<tr>' +
     ' <td>' + try_production.turbine[i] + '</td>' +
@@ -288,7 +286,7 @@ document.getElementById('recording_history_table').appendChild(table_body_elemen
 var row_data = '<tr> <th>Site</th> <th>Distance [km]</th> <th>V_ave [m/s] </th> <th>Cp [%]</th> </tr>';
 for (var i = 0; i < try_near_comp.site_number.length; i++) {
   var row_data = row_data + '<tr>' +
-    ' <td><h3 class="tooltip">' + try_near_comp.name[i] + '<span class="tooltiptext">Link to site. <a href="../../' + try_near_comp.site_number[i] + '/dashboard_' + try_near_comp.site_number[i] + '.html">More</a></span></h3></td> ' +
+    ' <td><h3 class="tooltip">' + try_near_comp.name[i] + '<span class="tooltiptext">Link to site. <a href="../../meas_data/' + try_near_comp.site_number[i] + '/dashboard_' + try_near_comp.site_number[i] + '.html">More</a></span></h3></td> ' +
     ' <td>' + try_near_comp.distance[i] + '</td>' +
     ' <td>' + try_near_comp.v_ave[i] + '</td>' +
     ' <td>' + try_near_comp.cp_l[i] + '</td>' +    '</tr>'; }
@@ -299,7 +297,7 @@ document.getElementById('neary_site_comparison').appendChild(table_body_element)
 <!-- NEARBY SITE COMP TABLE DATA -->
 
 
-<script type="text/javascript" src="../webfiles/menu.js"></script> 
+<script type="text/javascript" src="../../webfiles/menu.js"></script> 
 
 <div class="cell cell_factoids_end">
       <h3>Data provided by the TRY analysis. </h3>

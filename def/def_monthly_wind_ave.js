@@ -22,6 +22,7 @@ var line_style_1 = solid_line
 var line_style_2 = dash_line
 var legend_5 = ' no legend' 
 //Template
+
 var ctx = document.getElementById(chart_name).getContext('2d');
 
 var myChart = new Chart(ctx, {
@@ -63,7 +64,7 @@ var myChart = new Chart(ctx, {
   options: {
 
     title: {
-      display: false,
+      display: true,
       text: 'Average Wind Speed',
       fontSize: font_1,
     },
@@ -76,8 +77,9 @@ var myChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           beginAtZero: true,
-          max: monthly_v_ave.m_v_max,
-          fontSize: font_1
+          max: Math.ceil(monthly_v_ave.m_v_max),
+          fontSize: font_1,
+          display: true
         },
         scaleLabel:{
           display: true,

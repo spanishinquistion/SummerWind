@@ -56,4 +56,4 @@ base_data_quality.years = [2019]
 base_data_quality.quality = [99.97]
 base_data_quality.ymin = 99.97
 
-var last_check = "2020-07-05" 
+var last_check = "2020-07-13" 
