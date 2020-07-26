@@ -260,6 +260,24 @@ margin: 0 0
   height: 54px;
   display: block;
 }
+.buttonTRY {
+text-align: center;
+padding: 0 0;
+margin: 0 0
+}
+
+.buttonTRY a {
+  background-color: RoyalBlue;
+  border-radius: 6px;
+  font-size: 16px;
+  color: white;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  padding-bottom: 0;
+  height: 54px;
+  display: block;
+}
 /* end map stuff */
 
 
