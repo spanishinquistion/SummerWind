@@ -91,7 +91,7 @@ try_pdf_data.font_1 = 18
 
 var try_near_comp = {} <!-- _near_comp site, name, distance, v_ave, cp(3) -->
 try_near_comp.site_number=["00072", "03268", "13965"]
-try_near_comp.name=["Albstadt-Onstmettingen", "Meßstetten-Appental", "Balingen-Bronnhaupten"]
+try_near_comp.name=["Albstadt-Onstmettingen", "MeÃŸstetten-Appental", "Balingen-Bronnhaupten"]
 try_near_comp.distance=[0.25, 10.42, 14.14]
 try_near_comp.v_ave=[2.04, 2.77, 2.98]
 try_near_comp.cp_s=[4.12, 1.83, 3.09]

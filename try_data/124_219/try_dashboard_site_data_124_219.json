@@ -91,7 +91,7 @@ try_pdf_data.font_1 = 18
 
 var try_near_comp = {} <!-- _near_comp site, name, distance, v_ave, cp(3) -->
 try_near_comp.site_number=["00011", "02638", "05128"]
-try_near_comp.name=["Donaueschingen (Landeplatz)", "Klippeneck", "Tuttlingen-Möhringen-Vorstadt"]
+try_near_comp.name=["Donaueschingen (Landeplatz)", "Klippeneck", "Tuttlingen-MÃ¶hringen-Vorstadt"]
 try_near_comp.distance=[0.55, 19.62, 21.37]
 try_near_comp.v_ave=[2.45, 4.01, 1.48]
 try_near_comp.cp_s=[3.0, 7.56, 0.26]

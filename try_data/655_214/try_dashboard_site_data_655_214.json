@@ -91,7 +91,7 @@ try_pdf_data.font_1 = 18
 
 var try_near_comp = {} <!-- _near_comp site, name, distance, v_ave, cp(3) -->
 try_near_comp.site_number=["00044", "01503", "03791"]
-try_near_comp.name=["Groﬂenkneten", "Friesoythe-Altenoythe", "Oldenburg"]
+try_near_comp.name=["Gro√üenkneten", "Friesoythe-Altenoythe", "Oldenburg"]
 try_near_comp.distance=[0.62, 28.36, 31.39]
 try_near_comp.v_ave=[3.97, 3.95, 3.63]
 try_near_comp.cp_s=[8.37, 7.87, 6.62]
