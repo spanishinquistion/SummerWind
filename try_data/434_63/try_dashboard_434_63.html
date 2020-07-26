@@ -1,4 +1,4 @@
-<!-- 00003 dashboard html input file --> 
+<!-- try dashboard html input file --> 
 
 <!--<script type="text/javascript" src="hi_res_dashboard_site_data_00003.json"></script> -->
 <!DOCTYPE html>
@@ -6,8 +6,7 @@
 
 <head>
 <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
-<script type="text/javascript" src="try_dashboard_site_data_434_63.json"></script> 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script type="text/javascript" src="try_dashboard_site_data_434_63.json"></script>   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -303,10 +302,19 @@ document.getElementById('neary_site_comparison').appendChild(table_body_element)
       <h3>Data provided by the TRY analysis. </h3>
 
 <p>This is a report based on the the DWD TRY Testreferenzjahre. This is data that is created from nearby wind sites and a fluid dynamic analysis of Germany. It can not be 100% accurate but is designed to create the best possible site estimate of local conditions in Germany.</p>
-<div class="button"><script>
+<div class="buttonTRY"><script>
    document.write('<a href='), document.write(try_report_link), document.write(' target="_blank">Visit DWD/TRY page</a>')
 </script>
 </div>
+
+<div class="button"><script>document.write('<a href=mailto:' + owd_email  + '?subject=Detailed%20wind%20data%20SITE%20-%20' + site_data.number + "%20"   + site_data.site + ",%20"   + site_data.land+ '>' + "Request a detailed report" + '</a>')</script>
+</div>
+
+<div class="cell_hi_res_link" >
+  <div class="button3" id = "hi_res_condition" style="visibility: visible;">
+    <script>document.write('<a href=../../meas_data/' + try_near_comp.site_number[0] + '/dashboard_' + try_near_comp.site_number[0] +'.html >'  + "Measurement results of nearest site" + '</a>')</script>
+  </div>
+<div>
 
 </body>
 </html>
