@@ -6,10 +6,10 @@ site_data.site = "Neuruppin-Alt Ruppin";
 site_data.land = "Brandenburg";
 site_data.map_site = "<object type=\"text/html\" class=\"site_map\" data=\"../../miniMaps/dashboard_map_00096.html\")></object>";
 site_data.rank = "<script>document.write(data_check.s00096[1]);<\/script>";
-site_data.years = "1.2";
+site_data.years = "1.3";
 site_data.years10min = "0.1";
-site_data.last = "2020-07-04";
-site_data.LAST_UPDATE = "2020-07-04";
+site_data.last = "2020-07-15";
+site_data.LAST_UPDATE = "2020-07-15";
 site_data.c_p = "2.63";
 site_data.v_ave = "2.51";
 site_data.prevailing_wind_dir = "W";
@@ -25,7 +25,7 @@ meas_height.h_m = [12.0]
 var base_production = {} 
 base_production.turbine = ["S", "M", "L"]
 base_production.c_p = [1.45, 2.41, 2.63]
-base_production.AEP = ["1,270", "317,083", "798,457"]
+base_production.AEP = ["1,269", "316,818", "797,698"]
 base_production.P_R = [10, 1500, 3460]
 
 var base_v_ave = {} 
@@ -33,19 +33,19 @@ base_v_ave.type = "base_"
 base_v_ave.turbine = ["S", "M", "L"]
 base_v_ave.h_h = [30, 80, 100]
 base_v_ave.year = [2019, 2020]
-base_v_ave.h_m = [2.33, 2.78]
-base_v_ave.S = [2.72, 3.25]
-base_v_ave.M = [3.14, 3.74]
-base_v_ave.L = [3.23, 3.86]
+base_v_ave.h_m = [2.33, 2.76]
+base_v_ave.S = [2.72, 3.22]
+base_v_ave.M = [3.14, 3.72]
+base_v_ave.L = [3.23, 3.83]
 
 var wind_rose_data_m0 = {} 
 wind_rose_data_m0.month = 0 
-wind_rose_data_m0.max_p = 15.0
-wind_rose_data_m0.data = [4.36, 4.45, 5.82, 6.68, 8.86, 2.85, 3.08, 3.44, 7.71, 7.12, 6.94, 11.26, 14.67, 6.08, 4.06, 2.63]
+wind_rose_data_m0.max_p = 16.0
+wind_rose_data_m0.data = [4.32, 4.37, 5.71, 6.57, 8.66, 2.82, 3.08, 3.38, 7.59, 7.01, 6.96, 11.39, 15.15, 6.24, 4.1, 2.63]
 
 var base_pdf_data = {} 
 base_pdf_data = {} 
-base_pdf_data.data = [9.99, 17.06, 19.66, 18.14, 14.12, 9.5, 5.59, 2.9, 1.33, 0.54, 0.2, 0.06, 0.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+base_pdf_data.data = [10.17, 17.24, 19.76, 18.12, 14.02, 9.37, 5.48, 2.83, 1.29, 0.53, 0.19, 0.06, 0.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 base_pdf_data.V_range = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 base_pdf_data.pdf_mask = false
 base_pdf_data.font_1 = 18
@@ -56,4 +56,4 @@ base_data_quality.years = [2019]
 base_data_quality.quality = [99.97]
 base_data_quality.ymin = 99.97
 
-var last_check = "2020-07-13" 
+var last_check = "2020-07-25" 

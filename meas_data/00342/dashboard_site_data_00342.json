@@ -8,8 +8,8 @@ site_data.map_site = "<object type=\"text/html\" class=\"site_map\" data=\"../..
 site_data.rank = "<script>document.write(data_check.s00342[1]);<\/script>";
 site_data.years = "9.6";
 site_data.years10min = "9.1";
-site_data.last = "2020-07-04";
-site_data.LAST_UPDATE = "2020-07-04";
+site_data.last = "2020-07-15";
+site_data.LAST_UPDATE = "2020-07-15";
 site_data.c_p = "8.56";
 site_data.v_ave = "3.35";
 site_data.prevailing_wind_dir = "SW";
@@ -25,7 +25,7 @@ meas_height.h_m = [10.0]
 var base_production = {} 
 base_production.turbine = ["S", "M", "L"]
 base_production.c_p = [5.19, 7.47, 8.56]
-base_production.AEP = ["4,545", "981,533", "2,594,976"]
+base_production.AEP = ["4,545", "981,606", "2,594,979"]
 base_production.P_R = [10, 1500, 3460]
 
 var base_v_ave = {} 
@@ -33,19 +33,19 @@ base_v_ave.type = "base_"
 base_v_ave.turbine = ["S", "M", "L"]
 base_v_ave.h_h = [30, 80, 100]
 base_v_ave.year = [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
-base_v_ave.h_m = [3.21, 3.51, 3.41, 3.29, 3.18, 3.57, 3.12, 3.31, 3.14, 3.41, 3.86]
-base_v_ave.S = [3.87, 4.24, 4.11, 3.97, 3.84, 4.31, 3.77, 3.99, 3.79, 4.12, 4.66]
-base_v_ave.M = [4.47, 4.89, 4.74, 4.58, 4.43, 4.97, 4.35, 4.61, 4.38, 4.75, 5.38]
-base_v_ave.L = [4.6, 5.03, 4.89, 4.71, 4.56, 5.12, 4.48, 4.75, 4.51, 4.89, 5.54]
+base_v_ave.h_m = [3.21, 3.51, 3.41, 3.29, 3.18, 3.57, 3.12, 3.31, 3.14, 3.41, 3.81]
+base_v_ave.S = [3.87, 4.24, 4.11, 3.97, 3.84, 4.31, 3.77, 3.99, 3.79, 4.12, 4.6]
+base_v_ave.M = [4.47, 4.89, 4.74, 4.58, 4.43, 4.97, 4.35, 4.61, 4.38, 4.75, 5.31]
+base_v_ave.L = [4.6, 5.03, 4.89, 4.71, 4.56, 5.12, 4.48, 4.75, 4.51, 4.89, 5.47]
 
 var wind_rose_data_m0 = {} 
 wind_rose_data_m0.month = 0 
 wind_rose_data_m0.max_p = 13.0
-wind_rose_data_m0.data = [3.69, 4.78, 2.5, 4.49, 8.6, 4.17, 6.48, 5.32, 9.14, 8.35, 12.18, 9.42, 9.35, 5.21, 3.54, 2.78]
+wind_rose_data_m0.data = [3.69, 4.77, 2.51, 4.48, 8.57, 4.17, 6.47, 5.32, 9.14, 8.33, 12.18, 9.44, 9.37, 5.22, 3.55, 2.79]
 
 var base_pdf_data = {} 
 base_pdf_data = {} 
-base_pdf_data.data = [7.84, 10.98, 12.27, 12.27, 11.41, 10.04, 8.43, 6.81, 5.31, 4.02, 2.95, 2.1, 1.46, 0.99, 0.66, 0.43, 0.27, 0.17, 0.1, 0.06, 0.04, 0.02, 0.01, 0.01]
+base_pdf_data.data = [8.25, 11.29, 12.43, 12.29, 11.32, 9.89, 8.26, 6.64, 5.17, 3.9, 2.86, 2.04, 1.43, 0.97, 0.65, 0.42, 0.27, 0.17, 0.1, 0.06, 0.04, 0.02, 0.01, 0.01]
 base_pdf_data.V_range = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 base_pdf_data.pdf_mask = false
 base_pdf_data.font_1 = 18
@@ -56,4 +56,4 @@ base_data_quality.years = [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018,
 base_data_quality.quality = [100.0, 100.0, 100.0, 99.99, 99.92, 99.94, 100.0, 100.0, 99.99, 99.97]
 base_data_quality.ymin = 99.92
 
-var last_check = "2020-07-13" 
+var last_check = "2020-07-25" 

@@ -151,7 +151,7 @@
 <div class = "cell cell_probability_density">
     <h3 class="tooltip">Wind Speed Probability Density<span class="tooltiptext">Wind speed distribution or how often the wind at the site is at a given wind speed.<a href="../../methods.html#toc_3">More</a></span></h3>
     <canvas id="probability_density"></canvas>
-    <script>pdf_plot(base_pdf_data);</script>
+    <script>pdf_plot(base_pdf_data,site_data.number);</script>
 </div>
 
 
@@ -235,6 +235,17 @@ document.getElementById('measurement_heights').appendChild(table_body_element);
 <div class="button"><script>document.write('<a href=mailto:' + owd_email  + '?subject=Detailed%20wind%20data%20SITE%20-%20' + site_data.number + "%20"   + site_data.site + ",%20"   + site_data.land+ '>' + "Request a detailed report" + '</a>')</script>
 </div>
 
+<div class="cell_hi_res_link" >
+  <div class="button3" id = "hi_res_condition" style="visibility: visible;">
+    <script>document.write('<a href=hi_res_dashboard_' + site_data.number +'.html >'  + "High resolution data analysis of site" + '</a>')</script>
+  </div>
+<div>
+<script>
+  var time = site_data.years10min;
+  if (time == "0"){
+    document.getElementById("hi_res_condition").style.visibility="hidden";
+  }
+</script>
 
 
 <script>
@@ -242,10 +253,9 @@ document.getElementById('measurement_heights').appendChild(table_body_element);
 </script>  
 
 <div class="cell_try_link">
-
-  <div class="button2"><script>document.write('<a href=' + try_address +'>'  + "TRY CFD estimate of site" + '</a>')</script>
-
-</div>
+  <div class="button2">
+    <script>document.write('<a href=' + try_address +'>'  + "TRY CFD estimate of site" + '</a>')</script>
+  </div>
 </div>
 
 </body>
