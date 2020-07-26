@@ -1,10 +1,12 @@
-function pdf_plot(pdf_data) {
-  var chart_name = 'probability_density'
+function pdf_plot(pdf_data,site_number) {
+var chart_name = 'probability_density'
 
 var color_1 = 'royalblue' 
 var font_1 = 12
 var pdf_mask = pdf_data.pdf_mask
-var ytix = pdf_mask === true ? true : false;
+
+
+var ytix = (site_number == "00003" || site_number == "00399") ? true : false
 
 // Data Above Template Below
 var ctx = document.getElementById(chart_name).getContext('2d');
